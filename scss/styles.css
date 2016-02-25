@@ -92,6 +92,33 @@ a:hover {
   padding-bottom: 70px;
   border-bottom: 2px solid #6d757d; }
 
+.Picgal {
+  /*position: absolute;
+  top: 1000px; */
+  margin-top: 1em;
+  background: linear-gradient(#fff, transparent 15%), linear-gradient(0deg, #fff, transparent 20%) black;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  box-shadow: 6px 6px 6px white; }
+
+.gallery img {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #c1bdbd;
+  width: 33%;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  -moz-transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335); }
+
+a.gallery:hover {
+  -webkit-transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  -moz-transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  width: 500px;
+  height: auto;
+  color: rgba(255, 169, 73, 0.5); }
+
 .wildlife {
   color: white;
   text-align: left;
@@ -101,9 +128,18 @@ a:hover {
   background-image: url("../images/botanical.jpg");
   background-size: cover;
   box-shadow: inset 0 0 50px 10px rgba(0, 0, 0, 0.95);
-  border-radius: 10px; }
+  border-radius: 10px;
+  -webkit-transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  -moz-transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335); }
   .wildlife h2 {
     font-size: 20px; }
+
+a.wildlife:hover {
+  -webkit-transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  -moz-transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: all 5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  font-size: 200px; }
 
 .tips {
   float: left; }

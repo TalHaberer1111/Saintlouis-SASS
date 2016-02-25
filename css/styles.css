@@ -18,7 +18,6 @@ body {
   /*font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }*/
   font-family: TROGN___.ttf ;
 }
-h1,
 
 
 h2 {
@@ -60,17 +59,20 @@ a:hover {
   position: fixed;
   display: block;
   background: linear-gradient(#e56e6e, transparent 100%), linear-gradient(0deg, #705151, transparent 100%);
-  height: 140px;
+  height: 120px;
   margin-top: -10px;
   border-bottom: 2px solid black;
   width: 100%; }
+
 .navbar img {
-  width: 60px;
+  width: 55px;
   height: auto;
   /*margin-left: -20px;*/
   padding-top: 40px; }
 
 .Picgal {
+  /*position: absolute;
+  top: 1000px; */
   margin-top: 1em;
   background: linear-gradient(#fff, transparent 15%), linear-gradient(0deg, #fff, transparent 20%) black;
   padding-top: 40px;
@@ -93,7 +95,7 @@ a:hover {
 .main-header {
   /*display: block;*/
   /*position: fixed;*/
-  background: linear-gradient(#aeb6b7, transparent 60%), linear-gradient(0deg, #fff, transparent 30%), url("../images/louis.jpg") no-repeat center;
+  background: linear-gradient(#fff, transparent 60%), linear-gradient(0deg, #fff, transparent 30%), url("../images/louis.jpg") no-repeat center;
   background-size: cover;
   height: 850px;
   padding-top: 300px;
@@ -146,7 +148,9 @@ a:hover {
  }
 
 .main-header, .main-footer, .primary-content {
-  text-align: center; }
+  text-align: center;
+  /*position: relative;*/
+ }
 
 .primary-content, .secondary-content {
   border-top: 2px solid #6d757d; }
@@ -173,7 +177,14 @@ a:hover {
   height: 220px;
 
 }
+.cards {
+  width: 100%;
+  margin: 8%;
+
+}
+
 .card {
+  /*position: relative;*/
   color: white;
   /*display: inline;*/
 
@@ -181,8 +192,9 @@ a:hover {
     height: 220px;
     position: relative;
     -webkit-perspective: 700;
-    /*float: left;*/
+    float: left;
     margin: 60px auto;
+    padding-left: 20px;
     cursor: pointer;
     box-shadow: 20px 20px 20px gray;
 }
@@ -190,7 +202,6 @@ a:hover {
     content: '';
     position: absolute;
     width: 180px;
-    height: 180px;
     line-height: 180px;
     text-align: center;
     top: 0;
