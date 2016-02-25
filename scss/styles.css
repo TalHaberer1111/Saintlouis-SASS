@@ -1,42 +1,176 @@
-/*
-Error: Invalid CSS after "...light-gray-gray": expected selector or at-rule, was ": #48525c;"
-        on line 21 of ./scss/styles.scss
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-16:   src : url('kingthings_Versalis.ttf') format('truetype');
-17: }
-18: //variables
-19: //color variables
-20: $gray: #878787;
-21: $light-gray: $light-gray-gray: #48525c;
-22: $orange: #ffa949;
-23: $mint: #86e8b8;
-24: 
-25: 
-26: 
+@font-face {
+  font-family: "East";
+  src: url("EastMarket.ttf");
+  src: url("EastMarket.ttf") format("truetype"); }
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: East; }
 
-Backtrace:
-./scss/styles.scss:21
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:40:in `parse'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:403:in `_to_tree'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:293:in `watch'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin.rb:109:in `method_missing'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:383:in `watch_or_update'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
-/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...light-gray-gray\": expected selector or at-rule, was \": #48525c;\"\A         on line 21 of ./scss/styles.scss\A \A 16:   src : url('kingthings_Versalis.ttf') format('truetype');\A 17: }\A 18: //variables\A 19: //color variables\A 20: $gray: #878787;\A 21: $light-gray: $light-gray-gray: #48525c;\A 22: $orange: #ffa949;\A 23: $mint: #86e8b8;\A 24: \A 25: \A 26: "; }
+h1,
+h2 {
+  font-family: 'Abolition Regular', Helvetica, Arial, sans-serif; }
+
+h2 {
+  font-size: 3.3125em;
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; }
+
+h3 {
+  font-size: 1.25em;
+  color: #3a424a;
+  line-height: 1.2;
+  margin-bottom: 1.7em; }
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px; }
+
+ul,
+ol {
+  margin: 30px 0; }
+
+li {
+  margin-bottom: 10px; }
+
+/* Pseudo-classes ------------------ */
+a:link {
+  color: #ffa949;
+  text-decoration: none; }
+
+a:visited {
+  color: lightblue; }
+
+a:hover {
+  color: rgba(255, 169, 73, 0.5); }
+
+.navbar ul {
+  position: fixed;
+  display: block;
+  background: linear-gradient(#705151, transparent 100%), linear-gradient(0deg, #705151, transparent 100%);
+  height: 100px;
+  margin-top: -10px;
+  border-bottom: 2px solid black;
+  width: 100%; }
+.navbar img {
+  width: 60px;
+  height: auto;
+  margin-left: -20px;
+  padding-top: 20px; }
+
+.secondary-content img {
+  width: 300;
+  height: 300px; }
+
+.main-header {
+  background: linear-gradient(#2878e0, transparent 100%), linear-gradient(0deg, #fff, transparent 60%), url("../images/louis.jpg") no-repeat center;
+  background-size: cover;
+  height: 850px;
+  padding-top: 270px; }
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #86e8b8; }
+
+.primary-content {
+  padding-top: 25px;
+  padding-bottom: 95px; }
+
+.secondary-content {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  border-bottom: 2px solid #6d757d; }
+
+.wildlife {
+  color: white;
+  text-align: left;
+  padding: 18% 24%;
+  border-top: 4px solid #86e8b8;
+  margin: 105px 0 60px;
+  background-image: url("../images/botanical.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 50px 10px rgba(0, 0, 0, 0.95);
+  border-radius: 10px; }
+  .wildlife h2 {
+    font-size: 20px; }
+
+.tips {
+  float: left; }
+
+.resorts {
+  float: right; }
+
+.main-header, .main-footer, .primary-content {
+  text-align: center; }
+
+.primary-content, .secondary-content {
+  border-top: 2px solid #6d757d; }
+
+.primary-content, .secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px; }
+
+.tips, .resorts {
+  width: 46.5%; }
+
+.secondary-content:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* Web Fonts -------------------- */
+@font-face {
+  font-family: 'Abolition Regular';
+  src: url("../fonts/abolition-regular-webfont.eot");
+  src: url("../fonts/abolition-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/abolition-regular-webfont.woff") format("woff"), url("../fonts/abolition-regular-webfont.ttf") format("truetype"); }
+.main-heading {
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  margin: 12px 0 0; }
+
+.main-title {
+  color: white;
+  font-size: 1.625rem;
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px; }
+
+.intro {
+  font-size: 1.25em;
+  line-height: 1.6;
+  color: initial; }
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block; }
+
+.arrow {
+  width: 50px;
+  margin-top: 150px; }
+
+/*# sourceMappingURL=application.css.map */
+/*# sourceMappingURL=styles.css.map */
+
+/*# sourceMappingURL=styles.css.map */

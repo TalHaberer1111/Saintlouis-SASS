@@ -6,17 +6,20 @@
   box-sizing: border-box; }
 
 @font-face {
-  font-family: "king";
-  src: url("kingthings_Versalis.ttf");
-  src: url("kingthings_Versalis.ttf") format("truetype"); }
+  font-family: "TROGN___.ttf";
+  src: url("TROGN___.ttf");
+  src: url("TROGN___.ttf") format("truetype");
+ }
+
 body {
   color: #878787;
   margin: 0;
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
+  /*font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }*/
+  font-family: TROGN___.ttf ;
+}
 h1,
-h2 {
-  font-family: 'Abolition Regular', Helvetica, Arial, sans-serif; }
+
 
 h2 {
   font-size: 3.3125em;
@@ -56,28 +59,48 @@ a:hover {
 .navbar ul {
   position: fixed;
   display: block;
-  background: linear-gradient(#705151, transparent 100%), linear-gradient(0deg, #705151, transparent 100%);
-  height: 100px;
+  background: linear-gradient(#e56e6e, transparent 100%), linear-gradient(0deg, #705151, transparent 100%);
+  height: 140px;
   margin-top: -10px;
   border-bottom: 2px solid black;
   width: 100%; }
 .navbar img {
   width: 60px;
   height: auto;
-  margin-left: -20px;
-  padding-top: 20px; }
+  /*margin-left: -20px;*/
+  padding-top: 40px; }
+
+.Picgal {
+  margin-top: 1em;
+  background: linear-gradient(#fff, transparent 15%), linear-gradient(0deg, #fff, transparent 20%) black;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  box-shadow: 6px 6px 6px white;
+
+}
+  .gallery img {
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #c1bdbd;
+    width: 33%;
+    height: 250px;
+    margin: 0 auto;
+  }
 
 .secondary-content img {
-  width: 800px;
+  width: 300px;
   height: 300px; }
 
 .main-header {
-  background: linear-gradient(#2878e0, transparent 60%), linear-gradient(0deg, #fff, transparent 60%), url("../images/louis.jpg") no-repeat center;
+  /*display: block;*/
+  /*position: fixed;*/
+  background: linear-gradient(#aeb6b7, transparent 60%), linear-gradient(0deg, #fff, transparent 30%), url("../images/louis.jpg") no-repeat center;
   background-size: cover;
   height: 850px;
-  padding-top: 270px; }
+  padding-top: 300px;
+  font-size: 50px; }
 
 .main-footer {
+  clear:both;
   padding-top: 60px;
   padding-bottom: 60px;
   border-bottom: 10px solid #86e8b8; }
@@ -87,26 +110,40 @@ a:hover {
   padding-bottom: 95px; }
 
 .secondary-content {
+  width: 100%;
   padding-top: 80px;
   padding-bottom: 70px;
-  border-bottom: 2px solid #6d757d; }
+  border-bottom: 2px solid gray; }
+
+.wildlife h2 {
+  font-size: 25px;
+  text-align: center;
+}
 
 .wildlife {
   color: white;
   text-align: left;
   padding: 18% 24%;
-  border-top: 4px solid #86e8b8;
+  border-top: 4px solid gray;
   margin: 105px 0 60px;
   background: #434a52 url("../images/botanical.jpg") no-repeat center;
   background-size: cover;
   box-shadow: inset 0 0 50px 10px rgba(0, 0, 0, 0.95);
   border-radius: 10px; }
 
-.tips {
-  float: left; }
+/*.tips {
+  float: left; }*/
 
 .resorts {
-  float: right; }
+  /*background-color: blue;*/
+  /*display: inline;*/
+  border: 2px solid #cec6c6;
+  height: 750px;
+  float: left;
+  width: 33%;
+  margin: 0 auto;
+  padding: 20px;
+ }
 
 .main-header, .main-footer, .primary-content {
   text-align: center; }
@@ -121,8 +158,8 @@ a:hover {
   margin: auto;
   max-width: 960px; }
 
-.tips, .resorts {
-  width: 46.5%; }
+/*.resorts {
+  width: 46.5%; }*/
 
 .secondary-content:after {
   content: "";
@@ -130,10 +167,73 @@ a:hover {
   clear: both; }
 
 /* Web Fonts -------------------- */
-@font-face {
+
+.cards img {
+  width: 200px;
+  height: 220px;
+
+}
+.card {
+  color: white;
+  /*display: inline;*/
+
+    width: 200px;
+    height: 220px;
+    position: relative;
+    -webkit-perspective: 700;
+    /*float: left;*/
+    margin: 60px auto;
+    cursor: pointer;
+    box-shadow: 20px 20px 20px gray;
+}
+.card:before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    text-align: center;
+    top: 0;
+    left: -180px;
+    color: #222;
+}
+
+.card:hover .face {
+    -webkit-transition: all 0.3s ease-out;
+}
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: all 0.5s ease-out;
+    -webkit-transform-origin: 0 0;
+}
+.front {
+    -webkit-transform: rotateY(-20deg);
+    z-index: 2;
+}
+.back {
+    background: gray;
+    -webkit-transform: rotateY(0deg);
+    z-index: 1;
+}
+.card:hover .front {
+    -webkit-transform: rotateY(-35deg);
+}
+.card:active .front{
+    -webkit-transform: rotateY(-165deg);
+}
+.card:active .back {
+    -webkit-transform: rotateY(-15deg);
+}
+
+/*@font-face {
   font-family: 'Abolition Regular';
   src: url("../fonts/abolition-regular-webfont.eot");
-  src: url("../fonts/abolition-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/abolition-regular-webfont.woff") format("woff"), url("../fonts/abolition-regular-webfont.ttf") format("truetype"); }
+  src: url("../fonts/abolition-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/abolition-regular-webfont.woff") format("woff"), url("../fonts/abolition-regular-webfont.ttf") format("truetype"); }*/
 .main-heading {
   font-size: 30px;
   color: white;

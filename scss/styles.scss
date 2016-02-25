@@ -10,10 +10,10 @@
 // @import "neat/neat";
 
 @font-face{
-  font-family : "king";
+  font-family : "East";
 
-  src : url('kingthings_Versalis.ttf');
-  src : url('kingthings_Versalis.ttf') format('truetype');
+  src : url('EastMarket.ttf');
+  src : url('EastMarket.ttf') format('truetype');
 }
 //variables
 //color variables
@@ -29,7 +29,9 @@ $mint: #86e8b8;
 body {
   color: $gray;
   margin: 0;
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: East;
+ }
 
 h1,
 h2 {
@@ -90,7 +92,7 @@ a:hover {
 }
 
 .secondary-content img {
-  width: 800px;
+  width: 300;
   height: 300px;
 }
 
