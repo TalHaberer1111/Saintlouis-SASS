@@ -6,7 +6,8 @@
             box-sizing: border-box;
 }
 
-@import "bourbon/_bourbon.scss";
+@import "../css/bourbon/bourbon";
+// @import "neat/neat";
 
 @font-face{
   font-family : "king";
@@ -17,7 +18,9 @@
 //variables
 //color variables
 $gray: #878787;
-$light-gray: $light-gray-gray: #48525c;
+$light-gray: tint(#48525c, 20%);
+$light-gray-gray: #48525c;
+$dark-gray: shade(#48525c, 20%);
 $orange: #ffa949;
 $mint: #86e8b8;
 
@@ -67,6 +70,24 @@ a:hover {
   color: rgba(255, 169, 73, 0.5);
  }
 
+.navbar {
+
+  ul {
+    position: fixed;
+    display: block;
+    background: linear-gradient(#705151, transparent 100%), linear-gradient(0deg, #705151, transparent 100%),;
+    height: 100px;
+    margin-top: -10px;
+    border-bottom: 2px solid black;
+    width: 100%;
+  }
+  img {
+    width: 60px;
+    height: auto;
+    margin-left: -20px;
+    padding-top: 20px;
+  }
+}
 
 .secondary-content img {
   width: 800px;
@@ -74,10 +95,10 @@ a:hover {
 }
 
 .main-header {
-  background: linear-gradient($mint, transparent 50%), linear-gradient(0deg, #fff, transparent 90%), url("../images/coastBACK.jpg") no-repeat center;
+  background: linear-gradient(#2878e0, transparent 65%), linear-gradient(0deg, #fff, transparent 60%), url("../images/louis.jpg") no-repeat center;
   background-size: cover;
   height: 850px;
-  padding-top: 170px; }
+  padding-top: 270px; }
 
 .main-footer {
   padding-top: 60px;
@@ -137,7 +158,7 @@ a:hover {
   src: url("../fonts/abolition-regular-webfont.eot");
   src: url("../fonts/abolition-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/abolition-regular-webfont.woff") format("woff"), url("../fonts/abolition-regular-webfont.ttf") format("truetype"); }
 .main-heading {
-  font-size: 5.625rem;
+  font-size: 30px;
   color: white;
   text-transform: uppercase;
   font-weight: normal;
