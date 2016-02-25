@@ -72,7 +72,7 @@ a:hover {
   height: 300px; }
 
 .main-header {
-  background: linear-gradient(#2878e0, transparent 60%), linear-gradient(0deg, #fff, transparent 60%), url("../images/louis.jpg") no-repeat center;
+  background: linear-gradient(#2878e0, transparent 100%), linear-gradient(0deg, #fff, transparent 60%), url("../images/louis.jpg") no-repeat center;
   background-size: cover;
   height: 850px;
   padding-top: 270px; }
@@ -97,10 +97,12 @@ a:hover {
   padding: 18% 24%;
   border-top: 4px solid #86e8b8;
   margin: 105px 0 60px;
-  background: #434a52 url("../images/botanical.jpg") no-repeat center;
+  background-image: url("../images/botanical.jpg");
   background-size: cover;
   box-shadow: inset 0 0 50px 10px rgba(0, 0, 0, 0.95);
   border-radius: 10px; }
+  .wildlife h2 {
+    font-size: 20px; }
 
 .tips {
   float: left; }
